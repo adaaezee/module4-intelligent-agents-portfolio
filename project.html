@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Team Project | Adaeze Ugochukwu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Adaeze Ugochukwu - E-Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="unit1-3.html">Units 1&ndash;3</a></li>
+						<li><a href="unit4.html">Unit 4</a></li>
+						<li><a href="unit5-7.html">Units 5&ndash;7</a></li>
+						<li><a href="unit9-11.html">Units 9&ndash;11</a></li>
+						<li><a href="project.html" class="active">Project</a></li>
+						<li><a href="reflection.html">Reflection</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Team Project</h1>
+							<p>As part of this module, I worked within a team of software consultants and specialists in agent design and development. The team was tasked with designing and proposing a multi-agent system for a fictional client organisation with domain-specific requirements. Our findings were presented in a formal report-style document.</p>
+
+							<hr />
+
+							<h2>Project Overview</h2>
+							<h3>Executive Summary</h3>
+							<p>Insight Analytics Ltd requires an automated solution to identify, evaluate, and structure academic research to support internal knowledge development and client reporting, since manual literature review processes are time-intensive and difficult to scale. Our proposal outlines a blackboard-coordinated, Belief-Desire-Intention (BDI) multi-agent architecture. The system autonomously retrieves research data from the ArXiv API, evaluates the quality of the results, and generates structured JSON outputs for analysis and client reporting. The architecture prioritises modularity, scalability, and transparency of reasoning, ensuring operational efficiency and long-term maintainability.</p>
+
+							<hr />
+
+							<h2>My Individual Contributions</h2>
+							<p>My contributions to the team project spanned coordination, research, and technical design. Specifically, I was responsible for:</p>
+							<ul>
+								<li>Sending the team contract to all members at the start of the project</li>
+								<li>Supporting overall research into BDI agent architectures and multi-agent system design</li>
+								<li>Designing and building the UML architecture diagrams, including the system component architecture, sequence diagram, and ProcessingAgent activity diagram</li>
+								<li>Coordinating the final submission - circulating the completed report to all team members for sign-off before submitting on behalf of the group</li>
+							</ul>
+
+							<hr />
+
+							<h2>System Design Diagrams</h2>
+							<p>The following diagrams formed part of the team report and were produced as part of my individual contribution to the project.</p>
+
+							<h3>Figure 1 - Component Architecture</h3>
+							<p>The component architecture diagram illustrates the BDI multi-agent academic research system using blackboard coordination, showing how the Search, Extraction, Processing, and Storage agents interact through a shared environment.</p>
+							<span class="image fit"><img src="images/project-screenshot4.png" alt="Component architecture of the BDI multi-agent academic research system" /></span>
+
+							<h3>Figure 2 - Goal-Posting Sequence Diagram</h3>
+							<p>The sequence diagram maps out the goal-posting academic research workflow, tracing the full lifecycle of a research query from the researcher submitting a goal through to final storage of results.</p>
+							<span class="image fit"><img src="images/project-screenshot5.png" alt="Goal-posting academic research workflow sequence diagram" /></span>
+
+							<h3>Figure 3 - ProcessingAgent Activity Diagram</h3>
+							<p>The activity diagram models the internal decision-making cycle of the ProcessingAgent, incorporating the BDI perceive-deliberate-act cycle, quality assessment, and a reconsideration loop of up to five cycles.</p>
+							<span class="image fit"><img src="images/project-screenshot6.png" alt="ProcessingAgent activity diagram showing BDI cycle and quality control loop" /></span>
+
+							<hr />
+
+							<h2>Team Meeting Notes</h2>
+							<p>The following meeting notes were shared by Ioanna in the group forum following one of our team catch-ups. They summarise the key areas aligned during the meeting, including research status, theoretical background, and design proposal structure.</p>
+							<span class="image fit"><img src="images/project-meeting-notes.png" alt="Team meeting notes summarising progress on research, theoretical background and design proposal structure" /></span>
+
+							<hr />
+
+							<h2>Team Discussion Evidence</h2>
+							<p>The following screenshots evidence my participation in team discussions and collaborative activities throughout the project.</p>
+
+							<h3>Team Forum - Intro Discussion and Team Contract</h3>
+							<p>Following our first team meeting, I responded in the group forum to confirm that I had sent the team contract to all members as per the module instructions.</p>
+							<span class="image fit"><img src="images/project-screenshot1.png" alt="Team forum post confirming team contract was sent" /></span>
+
+							<h3>Final Submission - Report Circulated for Sign-off</h3>
+							<p>Prior to submission, I circulated the completed report to all team members via email, attaching the final PDF and requesting confirmation before submitting on behalf of the group.</p>
+							<span class="image fit"><img src="images/project-screenshot2.png" alt="Email to team circulating final report for sign-off before submission" /></span>
+
+							<h3>ProcessingAgent Diagram - Work in Progress</h3>
+							<p>This screenshot shows an earlier version of the ProcessingAgent activity diagram being edited in draw.io, with a team message confirming I was still refining the loop logic at the end of the diagram.</p>
+							<span class="image fit"><img src="images/project-screenshot3.png" alt="ProcessingAgent activity diagram being edited in draw.io" /></span>
+
+							<hr />
+
+							<h2>Individual Technical Work</h2>
+							<p>In addition to the group deliverables, I completed individual technical work on the system implementation, including writing and testing Python code for the multi-agent pipeline.</p>
+
+							<h3>ProcessingAgent - Python Implementation</h3>
+							<p>This screenshot shows the reconsideration logic within the ProcessingAgent, where the quality threshold is dynamically lowered across cycles rather than raising an error. The inline comments document the design rationale - returning lower-quality results with a transparency note is more useful to the researcher than returning nothing at all.</p>
+							<span class="image fit"><img src="images/project-code1.png" alt="Python code for ProcessingAgent reconsideration logic" /></span>
+
+							<h3>System Run - Terminal Output</h3>
+							<p>This screenshot shows the full multi-agent pipeline running successfully, with all four BDI agents (SearchAgent, ExtractionAgent, ProcessingAgent, StorageAgent) completing their cycles. The system retrieved 10 records from the ArXiv API, achieved a perfect quality score of 1.00, and saved the structured JSON output.</p>
+							<span class="image fit"><img src="images/project-terminal.png" alt="Terminal output showing full BDI multi-agent pipeline running successfully" /></span>
+
+							<h3>Test Suite - 22 Tests Passing</h3>
+							<p>The system was validated through a comprehensive test suite of 22 tests across 6 test suites, covering the Blackboard, all four agents, and a full integration test. All 22 tests passed in 0.018 seconds.</p>
+							<span class="image fit"><img src="images/project-tests.png" alt="Test suite results showing 22 tests passing across 6 test suites" /></span>
+
+							<hr />
+
+							<h2>Tutor Feedback</h2>
+							<p><strong>Overall Grade: 76%</strong></p>
+
+							<h3>Knowledge and Understanding</h3>
+							<p>The report demonstrates a strong understanding of intelligent agent architectures and the application of the Belief-Desire-Intention model within an academic research retrieval context. The theoretical foundations of agent systems are explained clearly and are appropriately connected to the proposed system design. The discussion of multi-agent coordination, reasoning cycles, and modular architecture reflects good comprehension of core intelligent agent principles, although further detail on implementation mechanisms and system behaviour during runtime would strengthen the technical depth.</p>
+
+							<h3>Criticality</h3>
+							<p>The report shows good evidence of critical reflection, particularly when discussing trade-offs between reactive and deliberative architectures and the limitations of rule-based approaches. The inclusion of challenges, limitations, and future work demonstrates awareness of practical design constraints and evolving agent research directions. However, the analysis could be further strengthened through deeper comparison with alternative agent architectures or approaches to intelligent information retrieval.</p>
+
+							<h3>Use of Relevant Sources</h3>
+							<p>The report demonstrates a strong use of relevant academic literature related to intelligent agents, multi-agent systems, and BDI architectures. Sources are integrated effectively to support theoretical explanations and design decisions, showing engagement with both foundational and contemporary work in the field. Greater synthesis of the literature to support critical argumentation would further improve the academic depth of the discussion.</p>
+
+							<h3>Structure and Presentation</h3>
+							<p>The report is clearly structured with well organised sections including theoretical background, system requirements, design decisions, challenges, and future work. The inclusion of architectural and interaction diagrams supports the explanation of the system design and improves overall readability. Minor improvements in formatting consistency and diagram labelling would enhance the overall professional presentation.</p>
+
+							<h3>Academic Integrity</h3>
+							<p>Academic conventions are followed consistently throughout the report, with appropriate citation of sources and a clearly structured reference list. The work demonstrates a strong attempt to maintain academic integrity and appropriate attribution of ideas. Minor improvements in formatting consistency and referencing style would further strengthen adherence to academic writing standards.</p>
+
+							<hr />
+
+							<h2>Peer Review</h2>
+							<p>In addition to the team report, I completed an individual peer review form reflecting on team dynamics, collaboration processes, and my personal contributions throughout the project. This was submitted separately alongside the team report.</p>
+
+							<hr />
+
+							<ul class="actions">
+								<li><a href="unit9-11.html" class="button">Previous: Units 9&ndash;11</a></li>
+								<li><a href="reflection.html" class="button">Next: Reflection</a></li>
+							</ul>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Adaeze Ugochukwu. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

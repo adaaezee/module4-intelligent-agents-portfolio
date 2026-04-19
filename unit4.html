@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Unit 4: Parse Tree Activity | Adaeze Ugochukwu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Adaeze Ugochukwu - E-Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="unit1-3.html">Units 1-3</a></li>
+						<li><a href="unit4.html" class="active">Unit 4</a></li>
+						<li><a href="unit5-7.html">Units 5-7</a></li>
+						<li><a href="unit9-11.html">Units 9-11</a></li>
+						<li><a href="project.html">Project</a></li>
+						<li><a href="reflection.html">Reflection</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Unit 4: Parse Tree Activity</h1>
+							<p>This activity required the creation of constituency-based parse trees for three given phrases. Parse trees are a core tool in natural language processing (NLP) and computational linguistics, used to represent the grammatical structure of a sentence by breaking it into its constituent phrases.</p>
+
+							<hr />
+
+							<h2>What is a Constituency-Based Parse Tree?</h2>
+							<p>A constituency parse tree represents a sentence as a hierarchical structure of nested constituents (phrases). Each node in the tree represents a grammatical unit - for example, a noun phrase (NP), verb phrase (VP), or prepositional phrase (PP) - broken down to individual parts of speech (POS) at the leaf level. Constituency parsing is foundational to natural language processing, with applications ranging from grammar checking and information extraction to question answering systems, where understanding the grammatical role of each phrase is essential to interpreting meaning accurately (Jurafsky and Martin, 2023).</p>
+
+							<hr />
+
+							<h2>Phrase 1: "The government raised interest rates."</h2>
+							<span class="image fit"><img src="images/parse-tree-1.png" alt="Parse tree for: The government raised interest rates" /></span>
+							<p><strong>Analysis:</strong></p>
+							<ul>
+								<li><strong>S</strong> &rarr; NP + VP</li>
+								<li><strong>NP</strong> (subject): "The government" &rarr; DT ("The") + NN ("government")</li>
+								<li><strong>VP</strong>: "raised interest rates" &rarr; VBD ("raised") + NP</li>
+								<li><strong>NP</strong> (object): "interest rates" &rarr; NN ("interest") + NNS ("rates")</li>
+							</ul>
+
+							<hr />
+
+							<h2>Phrase 2: "The internet gives everyone a voice."</h2>
+							<span class="image fit"><img src="images/parse-tree-2.png" alt="Parse tree for: The internet gives everyone a voice" /></span>
+							<p><strong>Analysis:</strong></p>
+							<ul>
+								<li><strong>S</strong> &rarr; NP + VP</li>
+								<li><strong>NP</strong> (subject): "The internet" &rarr; DT ("The") + NN ("internet")</li>
+								<li><strong>VP</strong>: "gives everyone a voice" &rarr; VBZ ("gives") + NP + NP</li>
+								<li><strong>NP</strong> (indirect object): "everyone" &rarr; NN ("everyone")</li>
+								<li><strong>NP</strong> (direct object): "a voice" &rarr; DT ("a") + NN ("voice")</li>
+							</ul>
+
+							<hr />
+
+							<h2>Phrase 3: "The man saw the dog with the telescope."</h2>
+							<p><strong>Analysis - Structural Ambiguity:</strong></p>
+							<p>This phrase is systematically ambiguous and has two valid parse trees depending on the attachment of the prepositional phrase "with the telescope":</p>
+
+							<h3>Reading 1 - PP attaches to VP (the man used the telescope)</h3>
+							<span class="image fit"><img src="images/parse-tree-3a.png" alt="Parse tree Reading 1: the man used the telescope - PP attaches to VP" /></span>
+							<ul>
+								<li><strong>VP</strong> has three children: VBD ("saw") + NP ("the dog") + PP ("with the telescope")</li>
+								<li>The PP modifies the verb phrase - it was the man who had the telescope</li>
+							</ul>
+
+							<h3>Reading 2 - PP attaches to NP (the dog had the telescope)</h3>
+							<span class="image fit"><img src="images/parse-tree-3b.png" alt="Parse tree Reading 2: the dog had the telescope - PP attaches to NP" /></span>
+							<ul>
+								<li><strong>VP</strong> has two children: VBD ("saw") + NP</li>
+								<li>The NP contains DT ("the") + NN ("dog") + PP ("with the telescope")</li>
+								<li>The PP modifies the noun phrase - it was the dog that had the telescope</li>
+							</ul>
+
+							<p>This ambiguity is a well-known challenge in NLP, illustrating why accurate parsing requires contextual understanding beyond pure syntax.</p>
+
+							<h2>References</h2>
+							<ul>
+								<li>Jurafsky, D. and Martin, J.H. (2023) 'Constituency Grammars', in <em>Speech and Language Processing.</em> 3rd edn. Available at: https://web.stanford.edu/~jurafsky/slp3/ (Accessed: 2 April 2026).</li>
+							</ul>
+
+							<hr />
+
+							<ul class="actions">
+								<li><a href="unit1-3.html" class="button">Previous: Units 1-3</a></li>
+								<li><a href="unit5-7.html" class="button">Next: Units 5-7</a></li>
+							</ul>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Adaeze Ugochukwu. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
